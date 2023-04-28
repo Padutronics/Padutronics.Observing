@@ -24,6 +24,8 @@ public sealed class ObservableValueHolder<T> : IObservable<T>
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     private string DebuggerDisplay => $"{Value}";
 
+    public bool HasValue => Value is not null;
+
     public T? Value
     {
         get => value;
