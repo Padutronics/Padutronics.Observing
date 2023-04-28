@@ -18,7 +18,7 @@ public sealed class ObservableValueHolder<T> : IObservable<T>
 
     public ObservableValueHolder(T? value)
     {
-        Value = value;
+        this.value = value;
     }
 
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
