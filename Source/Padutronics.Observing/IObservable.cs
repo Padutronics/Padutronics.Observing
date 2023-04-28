@@ -1,10 +1,6 @@
-using System;
-
 namespace Padutronics.Observing;
 
-public interface IObservable<T>
+public interface IObservable<T> : IReadOnlyObservable<T>
 {
-    T? Value { get; }
-
-    event EventHandler<ValueChangedEventArgs<T?>>? ValueChanged;
+    new T? Value { get; set; }
 }
